@@ -3,9 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use Spatie\Permission\Models\Role;
 
 class AdminUserSeeder extends Seeder
 {
@@ -14,7 +14,12 @@ class AdminUserSeeder extends Seeder
      */
     public function run(): void
     {
-        User::updateOrCreate(
+        foreach (['admin', 'editor', 'viewer', 'user'] as $role) {
+            Role::firstOrCreate(['name' => $role]);
+        }
+
+        /** @var User $admin */
+        $admin = User::updateOrCreate(
             ['email' => 'admin@test.com'],
             [
                 'name' => 'Admin',
@@ -22,5 +27,7 @@ class AdminUserSeeder extends Seeder
                 'email_verified_at' => now(),
             ]
         );
+
+        $admin->assignRole('admin');
     }
 }
