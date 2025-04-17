@@ -1,39 +1,33 @@
 FROM php:8.2-fpm
 
-# Установка PHP-зависимостей
+# Install PHP dependencies
 RUN apt-get update && apt-get install -y \
     libpng-dev libjpeg-dev libfreetype6-dev \
     libzip-dev zip unzip git curl libonig-dev libxml2-dev libicu-dev gnupg ca-certificates \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath zip intl gd
 
-# Установка Node.js + npm
-RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
-    apt-get install -y nodejs && \
-    npm install -g npm@9.8.1
-
-# Установка Composer
+# Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
+# Set working directory inside container
 WORKDIR /var/www
 
-# Только composer.json и lock для кеширования слоёв
-COPY composer.json composer.lock ./
-
-# Установка зависимостей
-RUN composer install --no-dev --optimize-autoloader
-
-# Копируем остальной проект
+# Copy entire project into container
 COPY . .
 
-# Сборка фронтенда
-RUN npm install && npm run build
+# Install PHP dependencies
+RUN composer install --optimize-autoloader
 
-# Laravel команды
+# Laravel application setup
 RUN cp .env.example .env && \
     php artisan key:generate && \
     php artisan storage:link
 
+RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
+
+# Run PHP-FPM by default
 CMD ["php-fpm"]
 
+# Expose port 9000 for PHP-FPM
 EXPOSE 9000

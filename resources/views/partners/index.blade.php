@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">Партнёры</h2>
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">Partners</h2>
     </x-slot>
 
     <div class="py-6 px-4 space-y-6">

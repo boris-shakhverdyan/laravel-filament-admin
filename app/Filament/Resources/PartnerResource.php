@@ -32,7 +32,7 @@ class PartnerResource extends Resource
                     ->rows(6)
                     ->formatStateUsing(fn ($state) => json_encode($state, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES))
                     ->dehydrateStateUsing(fn ($state) => json_decode($state, true))
-                    ->hint('Введите массив координат: [{"lat": ..., "lng": ...}, ...]')
+                    ->hint('Enter an array of coordinates: [{"lat": ..., "lng": ...}, ...]')
                     ->columnSpanFull()
                     ->nullable(),
             ]);

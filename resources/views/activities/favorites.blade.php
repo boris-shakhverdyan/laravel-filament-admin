@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">Избранные активности</h2>
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">Featured activities</h2>
     </x-slot>
 
     <div class="py-6 px-4 space-y-6">
@@ -9,18 +9,18 @@
                 <h3 class="text-lg font-bold">{{ $activity->title }}</h3>
                 <p class="text-gray-700">{{ $activity->short_description }}</p>
                 <p class="text-sm text-gray-600">
-                    Тип: {{ $activity->type->name ?? '—' }} |
-                    Партнёр: {{ $activity->partner->name ?? '—' }}
+                    Type: {{ $activity->type->name ?? '—' }} |
+                    Partner: {{ $activity->partner->name ?? '—' }}
                 </p>
 
                 <form method="POST" action="{{ route('activities.unfavorite', $activity) }}">
                     @csrf
                     @method('DELETE')
-                    <button class="text-red-500 hover:underline text-sm">Удалить из избранного</button>
+                    <button class="text-red-500 hover:underline text-sm">Remove from favorites</button>
                 </form>
             </div>
         @empty
-            <p class="text-gray-500 italic">У вас пока нет избранных активностей.</p>
+            <p class="text-gray-500 italic">You don't have any favorite activities yet.</p>
         @endforelse
 
         <div class="mt-4">

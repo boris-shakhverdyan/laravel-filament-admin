@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Все активности
+            All activities
         </h2>
     </x-slot>
 
@@ -13,9 +13,9 @@
                 <p class="text-sm text-gray-700">{{ $activity->short_description }}</p>
 
                 <ul class="text-sm text-gray-600">
-                    <li><strong>Тип:</strong> {{ $activity->type->name ?? '—' }}</li>
-                    <li><strong>Партнёр:</strong> {{ $activity->partner->name ?? '—' }}</li>
-                    <li><strong>Создано:</strong> {{ $activity->created_at->format('d.m.Y H:i') }}</li>
+                    <li><strong>Type:</strong> {{ $activity->type->name ?? '—' }}</li>
+                    <li><strong>Partner:</strong> {{ $activity->partner->name ?? '—' }}</li>
+                    <li><strong>Created At:</strong> {{ $activity->created_at->format('d.m.Y H:i') }}</li>
                 </ul>
 
                 @auth
@@ -24,20 +24,20 @@
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="text-red-500 text-sm hover:underline">
-                                Удалить из избранного
+                                Remove from favorites
                             </button>
                         </form>
                     @else
                         <form method="POST" action="{{ route('activities.favorite', $activity) }}">
                             @csrf
                             <button type="submit" class="text-blue-500 text-sm hover:underline">
-                                Добавить в избранное
+                                Add to Favorites
                             </button>
                         </form>
                     @endif
                 @else
                     <p class="text-sm text-gray-400 italic">
-                        Войдите, чтобы добавить в избранное.
+                        Login to add to favorites.
                     </p>
                 @endauth
 
@@ -50,7 +50,7 @@
                 @endif
             </div>
         @empty
-            <p class="text-gray-500">Нет активностей для отображения.</p>
+            <p class="text-gray-500">There are no activities to display.</p>
         @endforelse
 
         <div class="mt-6">
