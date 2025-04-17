@@ -12,10 +12,17 @@ RUN apt-get update && apt-get install -y \
     libonig-dev \
     libxml2-dev \
     libicu-dev \
-    && docker-php-ext-configure gd \
+    gnupg \
+    ca-certificates
+
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
+    apt-get install -y nodejs && \
+    npm install -g npm@9.8.1
+
+RUN docker-php-ext-configure gd \
         --with-freetype \
-        --with-jpeg \
-    && docker-php-ext-install \
+        --with-jpeg && \
+    docker-php-ext-install \
         pdo_mysql \
         mbstring \
         exif \
@@ -32,6 +39,9 @@ WORKDIR /var/www
 COPY . .
 
 RUN composer install --no-dev --optimize-autoloader
+
+RUN npm install && npm run build
+
 RUN cp .env.example .env && php artisan key:generate
 
 CMD ["php-fpm"]

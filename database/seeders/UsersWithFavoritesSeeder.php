@@ -25,7 +25,7 @@ class UsersWithFavoritesSeeder extends Seeder
         }
 
         if (Activity::count() === 0) {
-            Activity::factory(10)->create();
+            Activity::factory(30)->create();
         }
 
         $activities = Activity::all();
