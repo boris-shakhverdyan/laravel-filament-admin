@@ -33,8 +33,6 @@ Then run:
 docker exec -it laravel-app php artisan migrate:fresh --seed
 ```
 
-Frontend assets are compiled automatically in Docker (`npm install && npm run build`).
-
 ---
 
 ## Authentication
