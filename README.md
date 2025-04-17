@@ -1,10 +1,10 @@
-# TrustyOne — Тестовое задание
+# Laravel Role-Based Admin & Public Platform
 
-Полноценное Laravel-приложение с административной панелью (FilamentPHP), публичным frontend на Blade (Laravel Breeze) и REST API.
+A full Laravel application featuring an admin panel (FilamentPHP), public-facing frontend (Blade with Breeze), REST API, and geolocation polygon support.
 
 ---
 
-## 🔧 Технологии
+## Tech Stack
 - Laravel 12
 - PHP 8.2
 - MySQL 8
@@ -12,12 +12,12 @@
 - Breeze (Blade)
 - Spatie Laravel Permission
 - Spatie Media Library
-- Leaflet.js (карты)
+- Leaflet.js (maps)
 - Docker
 
 ---
 
-## 📦 Установка
+## Installation
 
 ```bash
 git clone https://github.com/boris-shakhverdyan/laravel-filament-admin.git
@@ -27,70 +27,70 @@ docker-compose build
 docker-compose up -d
 ```
 
-Затем:
+Then run:
 
 ```bash
 docker exec -it app php artisan migrate:fresh --seed
 ```
 
-Фронт соберётся автоматически в Docker (`npm install && npm run build`)
+Frontend assets are compiled automatically in Docker (`npm install && npm run build`).
 
 ---
 
-## Авторизация
+## Authentication
 
-### Админка: `/admin`
+### Admin Panel: `/admin`
 - Email: `admin@test.com`
-- Пароль: `123123123`
+- Password: `123123123`
 
-Роли: `admin`, `editor`, `viewer` — ограничение по действиям (CRUD, CRU, R)
+Roles: `admin`, `editor`, `viewer` — each with limited access (CRUD, CRU, R).
 
-### Публичная часть
-- Главная: `/` (список активностей)
-- Партёры: `/partners`
-- Избранное: `/favorites` (только для зарегистрированных)
+### Public Interface
+- Home: `/` (activity listing)
+- Partners: `/partners`
+- Favorites: `/favorites` (available for authenticated users)
 
 ---
 
-## Функциональность
+## Functionality
 
-- 🔹 Админка: управление пользователями, активностями, типами, партёрами, ролями
-- 🔹 Фронт: зарегистрированный юзер может добавлять/удалять избранного
-- 🔹 Полигоны: визуализация координат на карте полигонами (Leaflet)
-- 🔹 Роли скорректно разграничивают доступ
-- 🔹 Версии API, UI и admin отделены
+- Admin Panel: manage users, activities, types, partners, roles
+- Frontend: register, login, manage favorites
+- Polygon support: Leaflet.js to display geolocation areas
+- Role-based access: enforced across all layers
+- Clean separation: admin UI, public UI, and API
 
 ---
 
 ## API
 
-Доступен публично по `/api`:
+Public API endpoints available at `/api`:
 - `/api/users`
 - `/api/partners`
 - `/api/activities`
 
-Возвращает JSON с связанными моделями и пагинацией
+Returns paginated JSON with relationships and structure.
 
 ---
 
-## Что сделано:
+## Features Checklist
 
-| Часть                              | Статус |
-|----------------------------------|---------|
-| Docker + Laravel                | ✅      |
-| Filament (CRUD + roles)        | ✅      |
-| REST API                       | ✅      |
-| Breeze frontend + auth         | ✅      |
-| Избранное                      | ✅      |
-| Карты + полигоны               | ✅      |
-| Партнёры и типы активности     | ✅      |
-| Сидеры, миграции               | ✅      |
-| README                         | ✅      |
+| Feature                        | Status |
+|-------------------------------|--------|
+| Docker + Laravel              | ✅     |
+| Filament (CRUD + roles)       | ✅     |
+| REST API                      | ✅     |
+| Breeze frontend + auth        | ✅     |
+| Favorites logic               | ✅     |
+| Maps + polygon display        | ✅     |
+| Partner & activity type CRUD  | ✅     |
+| Seeders & migrations          | ✅     |
+| Final README                  | ✅     |
 
 ---
 
-## Автор
+## Author
 
-**Борис**  
+**Boris Shakhverdyan**  
 Email: boris@shakhverdyan.com  
 Telegram: @boris_shakhverdyan
