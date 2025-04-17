@@ -1,0 +1,1335 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Filament Admin API Documentation</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../docs/css/theme-default.style.css" media="screen">
+    <link rel="stylesheet" href="../docs/css/theme-default.print.css" media="print">
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/obsidian.min.css">
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jets/0.14.1/jets.min.js"></script>
+
+    <style id="language-style">
+        /* starts out as display none and is replaced with js later  */
+                    body .content .bash-example code { display: none; }
+                    body .content .javascript-example code { display: none; }
+            </style>
+
+    <script>
+        var tryItOutBaseUrl = "http://localhost:8000";
+        var useCsrf = Boolean();
+        var csrfUrl = "/sanctum/csrf-cookie";
+    </script>
+    <script src="../docs/js/tryitout-5.1.0.js"></script>
+
+    <script src="../docs/js/theme-default-5.1.0.js"></script>
+
+</head>
+
+<body data-languages="[&quot;bash&quot;,&quot;javascript&quot;]">
+
+<a href="#" id="nav-button">
+    <span>
+        MENU
+        <img src="../docs/images/navbar.png" alt="navbar-image"/>
+    </span>
+</a>
+<div class="tocify-wrapper">
+    
+            <div class="lang-selector">
+                                            <button type="button" class="lang-button" data-language-name="bash">bash</button>
+                                            <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
+                    </div>
+    
+    <div class="search">
+        <input type="text" class="search" id="input-search" placeholder="Search">
+    </div>
+
+    <div id="toc">
+                    <ul id="tocify-header-introduction" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="introduction">
+                    <a href="#introduction">Introduction</a>
+                </li>
+                            </ul>
+                    <ul id="tocify-header-authenticating-requests" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="authenticating-requests">
+                    <a href="#authenticating-requests">Authenticating requests</a>
+                </li>
+                            </ul>
+                    <ul id="tocify-header-endpoints" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="endpoints">
+                    <a href="#endpoints">Endpoints</a>
+                </li>
+                                    <ul id="tocify-subheader-endpoints" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-activities">
+                                <a href="#endpoints-GETapi-activities">GET api/activities</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-partners">
+                                <a href="#endpoints-GETapi-partners">GET api/partners</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-users">
+                                <a href="#endpoints-GETapi-users">GET api/users</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+            </div>
+
+    <ul class="toc-footer" id="toc-footer">
+                    <li style="padding-bottom: 5px;"><a href="../docs/collection.json">View Postman collection</a></li>
+                            <li style="padding-bottom: 5px;"><a href="../docs/openapi.yaml">View OpenAPI spec</a></li>
+                <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
+    </ul>
+
+    <ul class="toc-footer" id="last-updated">
+        <li>Last updated: April 17, 2025</li>
+    </ul>
+</div>
+
+<div class="page-wrapper">
+    <div class="dark-box"></div>
+    <div class="content">
+        <h1 id="introduction">Introduction</h1>
+<aside>
+    <strong>Base URL</strong>: <code>http://localhost:8000</code>
+</aside>
+<pre><code>This documentation aims to provide all the information you need to work with our API.
+
+&lt;aside&gt;As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
+You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).&lt;/aside&gt;</code></pre>
+
+        <h1 id="authenticating-requests">Authenticating requests</h1>
+<p>This API is not authenticated.</p>
+
+        <h1 id="endpoints">Endpoints</h1>
+
+    
+
+                                <h2 id="endpoints-GETapi-activities">GET api/activities</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-activities">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/activities" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/activities"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-activities">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;title&quot;: &quot;Quia aliquid eius sed.&quot;,
+            &quot;description&quot;: &quot;Expedita voluptatem veniam sunt dolore et. Officiis omnis dolores alias doloremque ratione animi aperiam. Quidem praesentium officiis commodi dolores.&quot;,
+            &quot;short_description&quot;: &quot;Non sit sint odit. Cupiditate voluptate ab et voluptates autem. Est voluptas nobis nisi vel et.&quot;,
+            &quot;registration_url&quot;: null,
+            &quot;location&quot;: [
+                {
+                    &quot;lat&quot;: 55.002435,
+                    &quot;lng&quot;: -91.507126
+                },
+                {
+                    &quot;lat&quot;: -56.305819,
+                    &quot;lng&quot;: -115.44698
+                },
+                {
+                    &quot;lat&quot;: 43.976902,
+                    &quot;lng&quot;: 6.72426
+                }
+            ],
+            &quot;type&quot;: &quot;Спортивное событие&quot;,
+            &quot;partner&quot;: {
+                &quot;id&quot;: 6,
+                &quot;name&quot;: &quot;O&#039;Keefe Group&quot;,
+                &quot;website&quot;: &quot;http://raynor.net/&quot;,
+                &quot;logo&quot;: &quot;https://via.placeholder.com/200x200.png/001177?text=business+logo+rerum&quot;,
+                &quot;location&quot;: [
+                    {
+                        &quot;lat&quot;: -57.612099,
+                        &quot;lng&quot;: 51.808592
+                    },
+                    {
+                        &quot;lat&quot;: -49.795964,
+                        &quot;lng&quot;: -69.935945
+                    },
+                    {
+                        &quot;lat&quot;: -56.20183,
+                        &quot;lng&quot;: 102.473467
+                    }
+                ]
+            },
+            &quot;created_by&quot;: &quot;Admin&quot;,
+            &quot;created_at&quot;: &quot;2025-04-17 16:24:13&quot;
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;title&quot;: &quot;Non totam odio quia.&quot;,
+            &quot;description&quot;: &quot;Enim eum fuga est necessitatibus dignissimos nobis doloremque. Inventore facilis ad quibusdam et non dolor ut. Voluptatem cumque commodi earum qui voluptatum. Atque minus tempore id repudiandae deserunt minus. Ut soluta ullam sit ratione.&quot;,
+            &quot;short_description&quot;: &quot;Et officiis quia eligendi atque et aspernatur earum. Est et illum animi tenetur. Odit et ab voluptatem quia est molestias molestiae.&quot;,
+            &quot;registration_url&quot;: &quot;https://sawayn.com/facere-rerum-dolor-et-consequatur-voluptas-praesentium-quibusdam.html&quot;,
+            &quot;location&quot;: [
+                {
+                    &quot;lat&quot;: -8.846962,
+                    &quot;lng&quot;: -75.827994
+                },
+                {
+                    &quot;lat&quot;: -5.122587,
+                    &quot;lng&quot;: 136.221103
+                },
+                {
+                    &quot;lat&quot;: 4.707428,
+                    &quot;lng&quot;: 87.942865
+                }
+            ],
+            &quot;type&quot;: &quot;Выступление (номер)&quot;,
+            &quot;partner&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Kreiger-Streich&quot;,
+                &quot;website&quot;: &quot;http://www.rolfson.com/quaerat-ipsa-ab-ut-a-et-sed&quot;,
+                &quot;logo&quot;: &quot;https://via.placeholder.com/200x200.png/0088aa?text=business+logo+sit&quot;,
+                &quot;location&quot;: [
+                    {
+                        &quot;lat&quot;: 57.54436,
+                        &quot;lng&quot;: 173.302841
+                    },
+                    {
+                        &quot;lat&quot;: -89.678227,
+                        &quot;lng&quot;: -26.5338
+                    },
+                    {
+                        &quot;lat&quot;: 39.164525,
+                        &quot;lng&quot;: 34.055303
+                    }
+                ]
+            },
+            &quot;created_by&quot;: &quot;Admin&quot;,
+            &quot;created_at&quot;: &quot;2025-04-17 16:24:13&quot;
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;title&quot;: &quot;Minus eum aperiam dolorem.&quot;,
+            &quot;description&quot;: &quot;Id et tempora nihil sapiente ad aspernatur consequatur. Et facere quidem dolorem unde. Quo sed unde molestias exercitationem. Iusto veniam inventore tenetur temporibus eveniet et quam sed.&quot;,
+            &quot;short_description&quot;: &quot;Mollitia fuga dolorum consequuntur blanditiis autem. Eaque expedita eligendi eveniet numquam autem. Cum dolore quia sed.&quot;,
+            &quot;registration_url&quot;: null,
+            &quot;location&quot;: [
+                {
+                    &quot;lat&quot;: 26.706529,
+                    &quot;lng&quot;: 88.573102
+                },
+                {
+                    &quot;lat&quot;: -3.420469,
+                    &quot;lng&quot;: 93.522769
+                },
+                {
+                    &quot;lat&quot;: 78.551953,
+                    &quot;lng&quot;: 94.180283
+                }
+            ],
+            &quot;type&quot;: &quot;Спортивное событие&quot;,
+            &quot;partner&quot;: {
+                &quot;id&quot;: 2,
+                &quot;name&quot;: &quot;Ankunding, Hamill and Considine&quot;,
+                &quot;website&quot;: &quot;http://ledner.info/vero-est-temporibus-aut&quot;,
+                &quot;logo&quot;: &quot;https://via.placeholder.com/200x200.png/009977?text=business+logo+aperiam&quot;,
+                &quot;location&quot;: [
+                    {
+                        &quot;lat&quot;: -65.881021,
+                        &quot;lng&quot;: -45.818526
+                    },
+                    {
+                        &quot;lat&quot;: 76.714503,
+                        &quot;lng&quot;: -68.769258
+                    },
+                    {
+                        &quot;lat&quot;: -65.910018,
+                        &quot;lng&quot;: 57.632188
+                    }
+                ]
+            },
+            &quot;created_by&quot;: &quot;Admin&quot;,
+            &quot;created_at&quot;: &quot;2025-04-17 16:24:13&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;title&quot;: &quot;Et aut excepturi vitae dolor.&quot;,
+            &quot;description&quot;: &quot;Est voluptatum voluptatum eligendi nihil. Et et velit incidunt quis cum. Et dolor animi facilis itaque temporibus. Facilis exercitationem nesciunt velit deserunt et possimus. Laborum rem quos qui culpa eos.&quot;,
+            &quot;short_description&quot;: &quot;Sed odio accusamus praesentium ut. Magni corrupti nemo labore aut totam ipsam. Totam et sequi rerum aut incidunt unde.&quot;,
+            &quot;registration_url&quot;: &quot;http://www.mcdermott.net/&quot;,
+            &quot;location&quot;: [
+                {
+                    &quot;lat&quot;: -9.650384,
+                    &quot;lng&quot;: -28.110094
+                },
+                {
+                    &quot;lat&quot;: -36.110375,
+                    &quot;lng&quot;: -41.613711
+                },
+                {
+                    &quot;lat&quot;: -21.944035,
+                    &quot;lng&quot;: 101.512889
+                }
+            ],
+            &quot;type&quot;: &quot;Концерт&quot;,
+            &quot;partner&quot;: {
+                &quot;id&quot;: 3,
+                &quot;name&quot;: &quot;Mante, Schroeder and Cummings&quot;,
+                &quot;website&quot;: &quot;http://www.lebsack.com/qui-quis-qui-in&quot;,
+                &quot;logo&quot;: &quot;https://via.placeholder.com/200x200.png/00bb88?text=business+logo+id&quot;,
+                &quot;location&quot;: [
+                    {
+                        &quot;lat&quot;: -13.402129,
+                        &quot;lng&quot;: 158.314883
+                    },
+                    {
+                        &quot;lat&quot;: -13.77457,
+                        &quot;lng&quot;: 129.950053
+                    },
+                    {
+                        &quot;lat&quot;: 82.473256,
+                        &quot;lng&quot;: 46.156252
+                    }
+                ]
+            },
+            &quot;created_by&quot;: &quot;Admin&quot;,
+            &quot;created_at&quot;: &quot;2025-04-17 16:24:13&quot;
+        },
+        {
+            &quot;id&quot;: 5,
+            &quot;title&quot;: &quot;Tempora ad aperiam.&quot;,
+            &quot;description&quot;: &quot;Rerum necessitatibus ipsum dignissimos qui et et non vel. Eum ab sint sed sit sit tenetur qui dolorem. Dolores quaerat accusantium quasi vitae. Maiores consequatur rem quo sunt nobis omnis ipsum.&quot;,
+            &quot;short_description&quot;: &quot;Ea neque et ullam quia ut. Dignissimos accusamus aliquam maiores eaque aliquam quia adipisci. Dicta et cumque nostrum voluptatum atque.&quot;,
+            &quot;registration_url&quot;: null,
+            &quot;location&quot;: [
+                {
+                    &quot;lat&quot;: 39.942392,
+                    &quot;lng&quot;: -149.958954
+                },
+                {
+                    &quot;lat&quot;: 47.475393,
+                    &quot;lng&quot;: 127.520844
+                },
+                {
+                    &quot;lat&quot;: -5.962626,
+                    &quot;lng&quot;: -12.887708
+                }
+            ],
+            &quot;type&quot;: &quot;Мастер-класс&quot;,
+            &quot;partner&quot;: {
+                &quot;id&quot;: 7,
+                &quot;name&quot;: &quot;Howe, Ankunding and Hill&quot;,
+                &quot;website&quot;: &quot;http://www.pouros.com/&quot;,
+                &quot;logo&quot;: &quot;https://via.placeholder.com/200x200.png/00ddee?text=business+logo+consequuntur&quot;,
+                &quot;location&quot;: [
+                    {
+                        &quot;lat&quot;: -72.438854,
+                        &quot;lng&quot;: 165.068835
+                    },
+                    {
+                        &quot;lat&quot;: 86.305855,
+                        &quot;lng&quot;: 77.33218
+                    },
+                    {
+                        &quot;lat&quot;: -17.636325,
+                        &quot;lng&quot;: 136.855606
+                    }
+                ]
+            },
+            &quot;created_by&quot;: &quot;Admin&quot;,
+            &quot;created_at&quot;: &quot;2025-04-17 16:24:13&quot;
+        },
+        {
+            &quot;id&quot;: 6,
+            &quot;title&quot;: &quot;Eum reiciendis dolor beatae.&quot;,
+            &quot;description&quot;: &quot;Ipsum rerum autem dolorem laborum. Enim a et consequatur dicta ut eaque dolores. Nemo nam hic est ad praesentium et. Officia dignissimos accusamus sed.&quot;,
+            &quot;short_description&quot;: &quot;Consequatur necessitatibus quia accusamus. Fuga aspernatur possimus et aut earum.&quot;,
+            &quot;registration_url&quot;: null,
+            &quot;location&quot;: [
+                {
+                    &quot;lat&quot;: -87.122944,
+                    &quot;lng&quot;: -179.864567
+                },
+                {
+                    &quot;lat&quot;: 64.140236,
+                    &quot;lng&quot;: 71.759172
+                },
+                {
+                    &quot;lat&quot;: 35.934993,
+                    &quot;lng&quot;: 22.908916
+                }
+            ],
+            &quot;type&quot;: &quot;Концерт&quot;,
+            &quot;partner&quot;: {
+                &quot;id&quot;: 5,
+                &quot;name&quot;: &quot;Padberg-West&quot;,
+                &quot;website&quot;: &quot;http://schulist.net/adipisci-hic-veritatis-illum-ut.html&quot;,
+                &quot;logo&quot;: &quot;https://via.placeholder.com/200x200.png/00aa33?text=business+logo+sit&quot;,
+                &quot;location&quot;: [
+                    {
+                        &quot;lat&quot;: -13.580077,
+                        &quot;lng&quot;: -94.600601
+                    },
+                    {
+                        &quot;lat&quot;: 33.091265,
+                        &quot;lng&quot;: 89.59582
+                    },
+                    {
+                        &quot;lat&quot;: -34.726357,
+                        &quot;lng&quot;: 70.541085
+                    }
+                ]
+            },
+            &quot;created_by&quot;: &quot;Admin&quot;,
+            &quot;created_at&quot;: &quot;2025-04-17 16:24:13&quot;
+        },
+        {
+            &quot;id&quot;: 7,
+            &quot;title&quot;: &quot;Assumenda voluptatem omnis.&quot;,
+            &quot;description&quot;: &quot;Odio nesciunt amet soluta ut ipsa accusantium natus ut. Quisquam et perspiciatis eos impedit sapiente perspiciatis. Maxime et eveniet officiis et illo quaerat. Tempora maxime neque iste et qui voluptates sunt.&quot;,
+            &quot;short_description&quot;: &quot;Unde dicta modi ipsa fugit repellendus quia ratione. Dolores voluptatem eaque suscipit blanditiis deleniti. Laudantium libero autem dolore.&quot;,
+            &quot;registration_url&quot;: &quot;http://www.wiza.biz/ea-ut-consequatur-repellat&quot;,
+            &quot;location&quot;: [
+                {
+                    &quot;lat&quot;: 82.925268,
+                    &quot;lng&quot;: 142.535046
+                },
+                {
+                    &quot;lat&quot;: -34.827644,
+                    &quot;lng&quot;: 117.208708
+                },
+                {
+                    &quot;lat&quot;: 64.393378,
+                    &quot;lng&quot;: -147.180388
+                }
+            ],
+            &quot;type&quot;: &quot;Другое&quot;,
+            &quot;partner&quot;: {
+                &quot;id&quot;: 7,
+                &quot;name&quot;: &quot;Howe, Ankunding and Hill&quot;,
+                &quot;website&quot;: &quot;http://www.pouros.com/&quot;,
+                &quot;logo&quot;: &quot;https://via.placeholder.com/200x200.png/00ddee?text=business+logo+consequuntur&quot;,
+                &quot;location&quot;: [
+                    {
+                        &quot;lat&quot;: -72.438854,
+                        &quot;lng&quot;: 165.068835
+                    },
+                    {
+                        &quot;lat&quot;: 86.305855,
+                        &quot;lng&quot;: 77.33218
+                    },
+                    {
+                        &quot;lat&quot;: -17.636325,
+                        &quot;lng&quot;: 136.855606
+                    }
+                ]
+            },
+            &quot;created_by&quot;: &quot;Admin&quot;,
+            &quot;created_at&quot;: &quot;2025-04-17 16:24:13&quot;
+        },
+        {
+            &quot;id&quot;: 8,
+            &quot;title&quot;: &quot;Praesentium necessitatibus quae.&quot;,
+            &quot;description&quot;: &quot;Vel officia architecto delectus ut ullam. In esse illo enim molestias. Saepe odit quos dignissimos provident dolorem temporibus itaque.&quot;,
+            &quot;short_description&quot;: &quot;Eos sed voluptatem dolorum laboriosam. Deleniti praesentium autem porro voluptatibus nulla eum qui. Quidem repellat est architecto natus aut id.&quot;,
+            &quot;registration_url&quot;: null,
+            &quot;location&quot;: [
+                {
+                    &quot;lat&quot;: 9.16137,
+                    &quot;lng&quot;: -52.661974
+                },
+                {
+                    &quot;lat&quot;: -40.645712,
+                    &quot;lng&quot;: -26.609552
+                },
+                {
+                    &quot;lat&quot;: 8.676798,
+                    &quot;lng&quot;: -10.649538
+                }
+            ],
+            &quot;type&quot;: &quot;Выступление (номер)&quot;,
+            &quot;partner&quot;: {
+                &quot;id&quot;: 6,
+                &quot;name&quot;: &quot;O&#039;Keefe Group&quot;,
+                &quot;website&quot;: &quot;http://raynor.net/&quot;,
+                &quot;logo&quot;: &quot;https://via.placeholder.com/200x200.png/001177?text=business+logo+rerum&quot;,
+                &quot;location&quot;: [
+                    {
+                        &quot;lat&quot;: -57.612099,
+                        &quot;lng&quot;: 51.808592
+                    },
+                    {
+                        &quot;lat&quot;: -49.795964,
+                        &quot;lng&quot;: -69.935945
+                    },
+                    {
+                        &quot;lat&quot;: -56.20183,
+                        &quot;lng&quot;: 102.473467
+                    }
+                ]
+            },
+            &quot;created_by&quot;: &quot;Admin&quot;,
+            &quot;created_at&quot;: &quot;2025-04-17 16:24:13&quot;
+        },
+        {
+            &quot;id&quot;: 9,
+            &quot;title&quot;: &quot;Iusto cum qui.&quot;,
+            &quot;description&quot;: &quot;Ad ad vel occaecati aut id odio. Harum suscipit harum fuga quidem consequatur provident pariatur. Ex id odit delectus delectus totam.&quot;,
+            &quot;short_description&quot;: &quot;Molestiae ut repellat illum ratione. Reprehenderit magni sint sed nostrum rerum nihil. Excepturi aut in sunt voluptatem voluptatem distinctio.&quot;,
+            &quot;registration_url&quot;: &quot;http://hodkiewicz.biz/&quot;,
+            &quot;location&quot;: [
+                {
+                    &quot;lat&quot;: 43.997864,
+                    &quot;lng&quot;: 27.377779
+                },
+                {
+                    &quot;lat&quot;: -25.186858,
+                    &quot;lng&quot;: 97.282679
+                },
+                {
+                    &quot;lat&quot;: 8.602204,
+                    &quot;lng&quot;: 149.069654
+                }
+            ],
+            &quot;type&quot;: &quot;Мастер-класс&quot;,
+            &quot;partner&quot;: {
+                &quot;id&quot;: 1,
+                &quot;name&quot;: &quot;Howell, Mraz and Heathcote&quot;,
+                &quot;website&quot;: &quot;http://considine.com/&quot;,
+                &quot;logo&quot;: &quot;https://via.placeholder.com/200x200.png/00eeaa?text=business+logo+est&quot;,
+                &quot;location&quot;: [
+                    {
+                        &quot;lat&quot;: -14.606314,
+                        &quot;lng&quot;: -121.260772
+                    },
+                    {
+                        &quot;lat&quot;: -27.68385,
+                        &quot;lng&quot;: 42.605637
+                    },
+                    {
+                        &quot;lat&quot;: 38.863604,
+                        &quot;lng&quot;: -149.604764
+                    }
+                ]
+            },
+            &quot;created_by&quot;: &quot;Admin&quot;,
+            &quot;created_at&quot;: &quot;2025-04-17 16:24:13&quot;
+        },
+        {
+            &quot;id&quot;: 10,
+            &quot;title&quot;: &quot;Et vitae et.&quot;,
+            &quot;description&quot;: &quot;Rerum quaerat dolores est nesciunt qui vel voluptas. In ratione commodi quis asperiores expedita recusandae et atque. Repudiandae quisquam voluptas aut possimus enim aliquid.&quot;,
+            &quot;short_description&quot;: &quot;Laudantium temporibus et tempore nihil est. Aliquid neque perferendis ipsam. Perspiciatis pariatur culpa nulla molestias aut.&quot;,
+            &quot;registration_url&quot;: &quot;http://www.kuvalis.com/&quot;,
+            &quot;location&quot;: [
+                {
+                    &quot;lat&quot;: -16.998716,
+                    &quot;lng&quot;: 113.456693
+                },
+                {
+                    &quot;lat&quot;: 78.525094,
+                    &quot;lng&quot;: 177.688077
+                },
+                {
+                    &quot;lat&quot;: -8.463742,
+                    &quot;lng&quot;: 178.201744
+                }
+            ],
+            &quot;type&quot;: &quot;Концерт&quot;,
+            &quot;partner&quot;: {
+                &quot;id&quot;: 3,
+                &quot;name&quot;: &quot;Mante, Schroeder and Cummings&quot;,
+                &quot;website&quot;: &quot;http://www.lebsack.com/qui-quis-qui-in&quot;,
+                &quot;logo&quot;: &quot;https://via.placeholder.com/200x200.png/00bb88?text=business+logo+id&quot;,
+                &quot;location&quot;: [
+                    {
+                        &quot;lat&quot;: -13.402129,
+                        &quot;lng&quot;: 158.314883
+                    },
+                    {
+                        &quot;lat&quot;: -13.77457,
+                        &quot;lng&quot;: 129.950053
+                    },
+                    {
+                        &quot;lat&quot;: 82.473256,
+                        &quot;lng&quot;: 46.156252
+                    }
+                ]
+            },
+            &quot;created_by&quot;: &quot;Admin&quot;,
+            &quot;created_at&quot;: &quot;2025-04-17 16:24:13&quot;
+        }
+    ],
+    &quot;links&quot;: {
+        &quot;first&quot;: &quot;http://localhost:8000/api/activities?page=1&quot;,
+        &quot;last&quot;: &quot;http://localhost:8000/api/activities?page=3&quot;,
+        &quot;prev&quot;: null,
+        &quot;next&quot;: &quot;http://localhost:8000/api/activities?page=2&quot;
+    },
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 3,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:8000/api/activities?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:8000/api/activities?page=2&quot;,
+                &quot;label&quot;: &quot;2&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:8000/api/activities?page=3&quot;,
+                &quot;label&quot;: &quot;3&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:8000/api/activities?page=2&quot;,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://localhost:8000/api/activities&quot;,
+        &quot;per_page&quot;: 10,
+        &quot;to&quot;: 10,
+        &quot;total&quot;: 30
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-activities" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-activities"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-activities"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-activities" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-activities">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-activities" data-method="GET"
+      data-path="api/activities"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-activities', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-activities"
+                    onclick="tryItOut('GETapi-activities');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-activities"
+                    onclick="cancelTryOut('GETapi-activities');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-activities"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/activities</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-activities"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-activities"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="endpoints-GETapi-partners">GET api/partners</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-partners">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/partners" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/partners"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-partners">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;name&quot;: &quot;Howell, Mraz and Heathcote&quot;,
+            &quot;website&quot;: &quot;http://considine.com/&quot;,
+            &quot;logo&quot;: &quot;https://via.placeholder.com/200x200.png/00eeaa?text=business+logo+est&quot;,
+            &quot;location&quot;: [
+                {
+                    &quot;lat&quot;: -14.606314,
+                    &quot;lng&quot;: -121.260772
+                },
+                {
+                    &quot;lat&quot;: -27.68385,
+                    &quot;lng&quot;: 42.605637
+                },
+                {
+                    &quot;lat&quot;: 38.863604,
+                    &quot;lng&quot;: -149.604764
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;name&quot;: &quot;Ankunding, Hamill and Considine&quot;,
+            &quot;website&quot;: &quot;http://ledner.info/vero-est-temporibus-aut&quot;,
+            &quot;logo&quot;: &quot;https://via.placeholder.com/200x200.png/009977?text=business+logo+aperiam&quot;,
+            &quot;location&quot;: [
+                {
+                    &quot;lat&quot;: -65.881021,
+                    &quot;lng&quot;: -45.818526
+                },
+                {
+                    &quot;lat&quot;: 76.714503,
+                    &quot;lng&quot;: -68.769258
+                },
+                {
+                    &quot;lat&quot;: -65.910018,
+                    &quot;lng&quot;: 57.632188
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;name&quot;: &quot;Mante, Schroeder and Cummings&quot;,
+            &quot;website&quot;: &quot;http://www.lebsack.com/qui-quis-qui-in&quot;,
+            &quot;logo&quot;: &quot;https://via.placeholder.com/200x200.png/00bb88?text=business+logo+id&quot;,
+            &quot;location&quot;: [
+                {
+                    &quot;lat&quot;: -13.402129,
+                    &quot;lng&quot;: 158.314883
+                },
+                {
+                    &quot;lat&quot;: -13.77457,
+                    &quot;lng&quot;: 129.950053
+                },
+                {
+                    &quot;lat&quot;: 82.473256,
+                    &quot;lng&quot;: 46.156252
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;name&quot;: &quot;Kreiger-Streich&quot;,
+            &quot;website&quot;: &quot;http://www.rolfson.com/quaerat-ipsa-ab-ut-a-et-sed&quot;,
+            &quot;logo&quot;: &quot;https://via.placeholder.com/200x200.png/0088aa?text=business+logo+sit&quot;,
+            &quot;location&quot;: [
+                {
+                    &quot;lat&quot;: 57.54436,
+                    &quot;lng&quot;: 173.302841
+                },
+                {
+                    &quot;lat&quot;: -89.678227,
+                    &quot;lng&quot;: -26.5338
+                },
+                {
+                    &quot;lat&quot;: 39.164525,
+                    &quot;lng&quot;: 34.055303
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 5,
+            &quot;name&quot;: &quot;Padberg-West&quot;,
+            &quot;website&quot;: &quot;http://schulist.net/adipisci-hic-veritatis-illum-ut.html&quot;,
+            &quot;logo&quot;: &quot;https://via.placeholder.com/200x200.png/00aa33?text=business+logo+sit&quot;,
+            &quot;location&quot;: [
+                {
+                    &quot;lat&quot;: -13.580077,
+                    &quot;lng&quot;: -94.600601
+                },
+                {
+                    &quot;lat&quot;: 33.091265,
+                    &quot;lng&quot;: 89.59582
+                },
+                {
+                    &quot;lat&quot;: -34.726357,
+                    &quot;lng&quot;: 70.541085
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 6,
+            &quot;name&quot;: &quot;O&#039;Keefe Group&quot;,
+            &quot;website&quot;: &quot;http://raynor.net/&quot;,
+            &quot;logo&quot;: &quot;https://via.placeholder.com/200x200.png/001177?text=business+logo+rerum&quot;,
+            &quot;location&quot;: [
+                {
+                    &quot;lat&quot;: -57.612099,
+                    &quot;lng&quot;: 51.808592
+                },
+                {
+                    &quot;lat&quot;: -49.795964,
+                    &quot;lng&quot;: -69.935945
+                },
+                {
+                    &quot;lat&quot;: -56.20183,
+                    &quot;lng&quot;: 102.473467
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 7,
+            &quot;name&quot;: &quot;Howe, Ankunding and Hill&quot;,
+            &quot;website&quot;: &quot;http://www.pouros.com/&quot;,
+            &quot;logo&quot;: &quot;https://via.placeholder.com/200x200.png/00ddee?text=business+logo+consequuntur&quot;,
+            &quot;location&quot;: [
+                {
+                    &quot;lat&quot;: -72.438854,
+                    &quot;lng&quot;: 165.068835
+                },
+                {
+                    &quot;lat&quot;: 86.305855,
+                    &quot;lng&quot;: 77.33218
+                },
+                {
+                    &quot;lat&quot;: -17.636325,
+                    &quot;lng&quot;: 136.855606
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 8,
+            &quot;name&quot;: &quot;Skiles Inc&quot;,
+            &quot;website&quot;: &quot;http://rohan.com/&quot;,
+            &quot;logo&quot;: &quot;https://via.placeholder.com/200x200.png/0000dd?text=business+logo+et&quot;,
+            &quot;location&quot;: [
+                {
+                    &quot;lat&quot;: 71.010205,
+                    &quot;lng&quot;: -127.136168
+                },
+                {
+                    &quot;lat&quot;: 19.671421,
+                    &quot;lng&quot;: -79.447982
+                },
+                {
+                    &quot;lat&quot;: -42.79003,
+                    &quot;lng&quot;: -84.350963
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 9,
+            &quot;name&quot;: &quot;Mohr, Reichel and Jenkins&quot;,
+            &quot;website&quot;: &quot;https://www.mckenzie.biz/quia-vel-omnis-deleniti-error-ut-qui&quot;,
+            &quot;logo&quot;: &quot;https://via.placeholder.com/200x200.png/004488?text=business+logo+enim&quot;,
+            &quot;location&quot;: [
+                {
+                    &quot;lat&quot;: -1.183169,
+                    &quot;lng&quot;: 142.925065
+                },
+                {
+                    &quot;lat&quot;: -2.141557,
+                    &quot;lng&quot;: 89.180468
+                },
+                {
+                    &quot;lat&quot;: 68.920123,
+                    &quot;lng&quot;: -132.828166
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 10,
+            &quot;name&quot;: &quot;Goodwin Ltd&quot;,
+            &quot;website&quot;: &quot;http://effertz.net/quis-laborum-et-sint-ullam&quot;,
+            &quot;logo&quot;: &quot;https://via.placeholder.com/200x200.png/00cc33?text=business+logo+qui&quot;,
+            &quot;location&quot;: [
+                {
+                    &quot;lat&quot;: -39.44786,
+                    &quot;lng&quot;: 4.444015
+                },
+                {
+                    &quot;lat&quot;: 41.581518,
+                    &quot;lng&quot;: 74.712267
+                },
+                {
+                    &quot;lat&quot;: -57.540684,
+                    &quot;lng&quot;: -90.536048
+                }
+            ]
+        }
+    ],
+    &quot;links&quot;: {
+        &quot;first&quot;: &quot;http://localhost:8000/api/partners?page=1&quot;,
+        &quot;last&quot;: &quot;http://localhost:8000/api/partners?page=1&quot;,
+        &quot;prev&quot;: null,
+        &quot;next&quot;: null
+    },
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 1,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:8000/api/partners?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://localhost:8000/api/partners&quot;,
+        &quot;per_page&quot;: 10,
+        &quot;to&quot;: 10,
+        &quot;total&quot;: 10
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-partners" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-partners"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-partners"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-partners" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-partners">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-partners" data-method="GET"
+      data-path="api/partners"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-partners', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-partners"
+                    onclick="tryItOut('GETapi-partners');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-partners"
+                    onclick="cancelTryOut('GETapi-partners');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-partners"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/partners</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-partners"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-partners"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="endpoints-GETapi-users">GET api/users</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-users">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/users" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/users"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-users">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;name&quot;: &quot;Admin&quot;,
+            &quot;email&quot;: &quot;admin@test.com&quot;,
+            &quot;roles&quot;: [
+                &quot;admin&quot;
+            ]
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;name&quot;: &quot;Jed Lehner&quot;,
+            &quot;email&quot;: &quot;kailee.simonis@example.org&quot;,
+            &quot;roles&quot;: [
+                &quot;user&quot;
+            ]
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;name&quot;: &quot;Demarco Ortiz&quot;,
+            &quot;email&quot;: &quot;litzy.glover@example.com&quot;,
+            &quot;roles&quot;: [
+                &quot;user&quot;
+            ]
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;name&quot;: &quot;Maxwell Kozey&quot;,
+            &quot;email&quot;: &quot;hoeger.raleigh@example.net&quot;,
+            &quot;roles&quot;: [
+                &quot;user&quot;
+            ]
+        },
+        {
+            &quot;id&quot;: 5,
+            &quot;name&quot;: &quot;Mrs. Cleta Hegmann&quot;,
+            &quot;email&quot;: &quot;mswift@example.org&quot;,
+            &quot;roles&quot;: [
+                &quot;user&quot;
+            ]
+        },
+        {
+            &quot;id&quot;: 6,
+            &quot;name&quot;: &quot;Mr. Tobin Oberbrunner&quot;,
+            &quot;email&quot;: &quot;garry.kovacek@example.org&quot;,
+            &quot;roles&quot;: [
+                &quot;user&quot;
+            ]
+        },
+        {
+            &quot;id&quot;: 7,
+            &quot;name&quot;: &quot;Anika Jacobi&quot;,
+            &quot;email&quot;: &quot;romaguera.gerry@example.org&quot;,
+            &quot;roles&quot;: [
+                &quot;user&quot;
+            ]
+        },
+        {
+            &quot;id&quot;: 8,
+            &quot;name&quot;: &quot;Nelle Koelpin&quot;,
+            &quot;email&quot;: &quot;oconroy@example.com&quot;,
+            &quot;roles&quot;: [
+                &quot;user&quot;
+            ]
+        },
+        {
+            &quot;id&quot;: 9,
+            &quot;name&quot;: &quot;Salvador Pfannerstill&quot;,
+            &quot;email&quot;: &quot;boehm.jadon@example.com&quot;,
+            &quot;roles&quot;: [
+                &quot;user&quot;
+            ]
+        },
+        {
+            &quot;id&quot;: 10,
+            &quot;name&quot;: &quot;Dr. Nickolas Beier Jr.&quot;,
+            &quot;email&quot;: &quot;dereck00@example.com&quot;,
+            &quot;roles&quot;: [
+                &quot;user&quot;
+            ]
+        }
+    ],
+    &quot;links&quot;: {
+        &quot;first&quot;: &quot;http://localhost:8000/api/users?page=1&quot;,
+        &quot;last&quot;: &quot;http://localhost:8000/api/users?page=2&quot;,
+        &quot;prev&quot;: null,
+        &quot;next&quot;: &quot;http://localhost:8000/api/users?page=2&quot;
+    },
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 2,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:8000/api/users?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:8000/api/users?page=2&quot;,
+                &quot;label&quot;: &quot;2&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:8000/api/users?page=2&quot;,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://localhost:8000/api/users&quot;,
+        &quot;per_page&quot;: 10,
+        &quot;to&quot;: 10,
+        &quot;total&quot;: 13
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-users" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-users"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-users"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-users" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-users">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-users" data-method="GET"
+      data-path="api/users"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-users', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-users"
+                    onclick="tryItOut('GETapi-users');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-users"
+                    onclick="cancelTryOut('GETapi-users');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-users"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/users</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-users"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-users"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+            
+
+        
+    </div>
+    <div class="dark-box">
+                    <div class="lang-selector">
+                                                        <button type="button" class="lang-button" data-language-name="bash">bash</button>
+                                                        <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
+                            </div>
+            </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/activities
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":1,"title":"Quia aliquid eius sed.","description":"Expedita voluptatem veniam sunt dolore et. Officiis omnis dolores alias doloremque ratione animi aperiam. Quidem praesentium officiis commodi dolores.","short_description":"Non sit sint odit. Cupiditate voluptate ab et voluptates autem. Est voluptas nobis nisi vel et.","registration_url":null,"location":[{"lat":55.002435,"lng":-91.507126},{"lat":-56.305819,"lng":-115.44698},{"lat":43.976902,"lng":6.72426}],"type":"\u0421\u043f\u043e\u0440\u0442\u0438\u0432\u043d\u043e\u0435 \u0441\u043e\u0431\u044b\u0442\u0438\u0435","partner":{"id":6,"name":"O''Keefe Group","website":"http:\/\/raynor.net\/","logo":"https:\/\/via.placeholder.com\/200x200.png\/001177?text=business+logo+rerum","location":[{"lat":-57.612099,"lng":51.808592},{"lat":-49.795964,"lng":-69.935945},{"lat":-56.20183,"lng":102.473467}]},"created_by":"Admin","created_at":"2025-04-17 16:24:13"},{"id":2,"title":"Non totam odio quia.","description":"Enim eum fuga est necessitatibus dignissimos nobis doloremque. Inventore facilis ad quibusdam et non dolor ut. Voluptatem cumque commodi earum qui voluptatum. Atque minus tempore id repudiandae deserunt minus. Ut soluta ullam sit ratione.","short_description":"Et officiis quia eligendi atque et aspernatur earum. Est et illum animi tenetur. Odit et ab voluptatem quia est molestias molestiae.","registration_url":"https:\/\/sawayn.com\/facere-rerum-dolor-et-consequatur-voluptas-praesentium-quibusdam.html","location":[{"lat":-8.846962,"lng":-75.827994},{"lat":-5.122587,"lng":136.221103},{"lat":4.707428,"lng":87.942865}],"type":"\u0412\u044b\u0441\u0442\u0443\u043f\u043b\u0435\u043d\u0438\u0435 (\u043d\u043e\u043c\u0435\u0440)","partner":{"id":4,"name":"Kreiger-Streich","website":"http:\/\/www.rolfson.com\/quaerat-ipsa-ab-ut-a-et-sed","logo":"https:\/\/via.placeholder.com\/200x200.png\/0088aa?text=business+logo+sit","location":[{"lat":57.54436,"lng":173.302841},{"lat":-89.678227,"lng":-26.5338},{"lat":39.164525,"lng":34.055303}]},"created_by":"Admin","created_at":"2025-04-17 16:24:13"},{"id":3,"title":"Minus eum aperiam dolorem.","description":"Id et tempora nihil sapiente ad aspernatur consequatur. Et facere quidem dolorem unde. Quo sed unde molestias exercitationem. Iusto veniam inventore tenetur temporibus eveniet et quam sed.","short_description":"Mollitia fuga dolorum consequuntur blanditiis autem. Eaque expedita eligendi eveniet numquam autem. Cum dolore quia sed.","registration_url":null,"location":[{"lat":26.706529,"lng":88.573102},{"lat":-3.420469,"lng":93.522769},{"lat":78.551953,"lng":94.180283}],"type":"\u0421\u043f\u043e\u0440\u0442\u0438\u0432\u043d\u043e\u0435 \u0441\u043e\u0431\u044b\u0442\u0438\u0435","partner":{"id":2,"name":"Ankunding, Hamill and Considine","website":"http:\/\/ledner.info\/vero-est-temporibus-aut","logo":"https:\/\/via.placeholder.com\/200x200.png\/009977?text=business+logo+aperiam","location":[{"lat":-65.881021,"lng":-45.818526},{"lat":76.714503,"lng":-68.769258},{"lat":-65.910018,"lng":57.632188}]},"created_by":"Admin","created_at":"2025-04-17 16:24:13"},{"id":4,"title":"Et aut excepturi vitae dolor.","description":"Est voluptatum voluptatum eligendi nihil. Et et velit incidunt quis cum. Et dolor animi facilis itaque temporibus. Facilis exercitationem nesciunt velit deserunt et possimus. Laborum rem quos qui culpa eos.","short_description":"Sed odio accusamus praesentium ut. Magni corrupti nemo labore aut totam ipsam. Totam et sequi rerum aut incidunt unde.","registration_url":"http:\/\/www.mcdermott.net\/","location":[{"lat":-9.650384,"lng":-28.110094},{"lat":-36.110375,"lng":-41.613711},{"lat":-21.944035,"lng":101.512889}],"type":"\u041a\u043e\u043d\u0446\u0435\u0440\u0442","partner":{"id":3,"name":"Mante, Schroeder and Cummings","website":"http:\/\/www.lebsack.com\/qui-quis-qui-in","logo":"https:\/\/via.placeholder.com\/200x200.png\/00bb88?text=business+logo+id","location":[{"lat":-13.402129,"lng":158.314883},{"lat":-13.77457,"lng":129.950053},{"lat":82.473256,"lng":46.156252}]},"created_by":"Admin","created_at":"2025-04-17 16:24:13"},{"id":5,"title":"Tempora ad aperiam.","description":"Rerum necessitatibus ipsum dignissimos qui et et non vel. Eum ab sint sed sit sit tenetur qui dolorem. Dolores quaerat accusantium quasi vitae. Maiores consequatur rem quo sunt nobis omnis ipsum.","short_description":"Ea neque et ullam quia ut. Dignissimos accusamus aliquam maiores eaque aliquam quia adipisci. Dicta et cumque nostrum voluptatum atque.","registration_url":null,"location":[{"lat":39.942392,"lng":-149.958954},{"lat":47.475393,"lng":127.520844},{"lat":-5.962626,"lng":-12.887708}],"type":"\u041c\u0430\u0441\u0442\u0435\u0440-\u043a\u043b\u0430\u0441\u0441","partner":{"id":7,"name":"Howe, Ankunding and Hill","website":"http:\/\/www.pouros.com\/","logo":"https:\/\/via.placeholder.com\/200x200.png\/00ddee?text=business+logo+consequuntur","location":[{"lat":-72.438854,"lng":165.068835},{"lat":86.305855,"lng":77.33218},{"lat":-17.636325,"lng":136.855606}]},"created_by":"Admin","created_at":"2025-04-17 16:24:13"},{"id":6,"title":"Eum reiciendis dolor beatae.","description":"Ipsum rerum autem dolorem laborum. Enim a et consequatur dicta ut eaque dolores. Nemo nam hic est ad praesentium et. Officia dignissimos accusamus sed.","short_description":"Consequatur necessitatibus quia accusamus. Fuga aspernatur possimus et aut earum.","registration_url":null,"location":[{"lat":-87.122944,"lng":-179.864567},{"lat":64.140236,"lng":71.759172},{"lat":35.934993,"lng":22.908916}],"type":"\u041a\u043e\u043d\u0446\u0435\u0440\u0442","partner":{"id":5,"name":"Padberg-West","website":"http:\/\/schulist.net\/adipisci-hic-veritatis-illum-ut.html","logo":"https:\/\/via.placeholder.com\/200x200.png\/00aa33?text=business+logo+sit","location":[{"lat":-13.580077,"lng":-94.600601},{"lat":33.091265,"lng":89.59582},{"lat":-34.726357,"lng":70.541085}]},"created_by":"Admin","created_at":"2025-04-17 16:24:13"},{"id":7,"title":"Assumenda voluptatem omnis.","description":"Odio nesciunt amet soluta ut ipsa accusantium natus ut. Quisquam et perspiciatis eos impedit sapiente perspiciatis. Maxime et eveniet officiis et illo quaerat. Tempora maxime neque iste et qui voluptates sunt.","short_description":"Unde dicta modi ipsa fugit repellendus quia ratione. Dolores voluptatem eaque suscipit blanditiis deleniti. Laudantium libero autem dolore.","registration_url":"http:\/\/www.wiza.biz\/ea-ut-consequatur-repellat","location":[{"lat":82.925268,"lng":142.535046},{"lat":-34.827644,"lng":117.208708},{"lat":64.393378,"lng":-147.180388}],"type":"\u0414\u0440\u0443\u0433\u043e\u0435","partner":{"id":7,"name":"Howe, Ankunding and Hill","website":"http:\/\/www.pouros.com\/","logo":"https:\/\/via.placeholder.com\/200x200.png\/00ddee?text=business+logo+consequuntur","location":[{"lat":-72.438854,"lng":165.068835},{"lat":86.305855,"lng":77.33218},{"lat":-17.636325,"lng":136.855606}]},"created_by":"Admin","created_at":"2025-04-17 16:24:13"},{"id":8,"title":"Praesentium necessitatibus quae.","description":"Vel officia architecto delectus ut ullam. In esse illo enim molestias. Saepe odit quos dignissimos provident dolorem temporibus itaque.","short_description":"Eos sed voluptatem dolorum laboriosam. Deleniti praesentium autem porro voluptatibus nulla eum qui. Quidem repellat est architecto natus aut id.","registration_url":null,"location":[{"lat":9.16137,"lng":-52.661974},{"lat":-40.645712,"lng":-26.609552},{"lat":8.676798,"lng":-10.649538}],"type":"\u0412\u044b\u0441\u0442\u0443\u043f\u043b\u0435\u043d\u0438\u0435 (\u043d\u043e\u043c\u0435\u0440)","partner":{"id":6,"name":"O''Keefe Group","website":"http:\/\/raynor.net\/","logo":"https:\/\/via.placeholder.com\/200x200.png\/001177?text=business+logo+rerum","location":[{"lat":-57.612099,"lng":51.808592},{"lat":-49.795964,"lng":-69.935945},{"lat":-56.20183,"lng":102.473467}]},"created_by":"Admin","created_at":"2025-04-17 16:24:13"},{"id":9,"title":"Iusto cum qui.","description":"Ad ad vel occaecati aut id odio. Harum suscipit harum fuga quidem consequatur provident pariatur. Ex id odit delectus delectus totam.","short_description":"Molestiae ut repellat illum ratione. Reprehenderit magni sint sed nostrum rerum nihil. Excepturi aut in sunt voluptatem voluptatem distinctio.","registration_url":"http:\/\/hodkiewicz.biz\/","location":[{"lat":43.997864,"lng":27.377779},{"lat":-25.186858,"lng":97.282679},{"lat":8.602204,"lng":149.069654}],"type":"\u041c\u0430\u0441\u0442\u0435\u0440-\u043a\u043b\u0430\u0441\u0441","partner":{"id":1,"name":"Howell, Mraz and Heathcote","website":"http:\/\/considine.com\/","logo":"https:\/\/via.placeholder.com\/200x200.png\/00eeaa?text=business+logo+est","location":[{"lat":-14.606314,"lng":-121.260772},{"lat":-27.68385,"lng":42.605637},{"lat":38.863604,"lng":-149.604764}]},"created_by":"Admin","created_at":"2025-04-17 16:24:13"},{"id":10,"title":"Et vitae et.","description":"Rerum quaerat dolores est nesciunt qui vel voluptas. In ratione commodi quis asperiores expedita recusandae et atque. Repudiandae quisquam voluptas aut possimus enim aliquid.","short_description":"Laudantium temporibus et tempore nihil est. Aliquid neque perferendis ipsam. Perspiciatis pariatur culpa nulla molestias aut.","registration_url":"http:\/\/www.kuvalis.com\/","location":[{"lat":-16.998716,"lng":113.456693},{"lat":78.525094,"lng":177.688077},{"lat":-8.463742,"lng":178.201744}],"type":"\u041a\u043e\u043d\u0446\u0435\u0440\u0442","partner":{"id":3,"name":"Mante, Schroeder and Cummings","website":"http:\/\/www.lebsack.com\/qui-quis-qui-in","logo":"https:\/\/via.placeholder.com\/200x200.png\/00bb88?text=business+logo+id","location":[{"lat":-13.402129,"lng":158.314883},{"lat":-13.77457,"lng":129.950053},{"lat":82.473256,"lng":46.156252}]},"created_by":"Admin","created_at":"2025-04-17 16:24:13"}],"links":{"first":"http:\/\/localhost:8000\/api\/activities?page=1","last":"http:\/\/localhost:8000\/api\/activities?page=3","prev":null,"next":"http:\/\/localhost:8000\/api\/activities?page=2"},"meta":{"current_page":1,"from":1,"last_page":3,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/activities?page=1","label":"1","active":true},{"url":"http:\/\/localhost:8000\/api\/activities?page=2","label":"2","active":false},{"url":"http:\/\/localhost:8000\/api\/activities?page=3","label":"3","active":false},{"url":"http:\/\/localhost:8000\/api\/activities?page=2","label":"Next &raquo;","active":false}],"path":"http:\/\/localhost:8000\/api\/activities","per_page":10,"to":10,"total":30}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/partners
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":1,"name":"Howell, Mraz and Heathcote","website":"http:\/\/considine.com\/","logo":"https:\/\/via.placeholder.com\/200x200.png\/00eeaa?text=business+logo+est","location":[{"lat":-14.606314,"lng":-121.260772},{"lat":-27.68385,"lng":42.605637},{"lat":38.863604,"lng":-149.604764}]},{"id":2,"name":"Ankunding, Hamill and Considine","website":"http:\/\/ledner.info\/vero-est-temporibus-aut","logo":"https:\/\/via.placeholder.com\/200x200.png\/009977?text=business+logo+aperiam","location":[{"lat":-65.881021,"lng":-45.818526},{"lat":76.714503,"lng":-68.769258},{"lat":-65.910018,"lng":57.632188}]},{"id":3,"name":"Mante, Schroeder and Cummings","website":"http:\/\/www.lebsack.com\/qui-quis-qui-in","logo":"https:\/\/via.placeholder.com\/200x200.png\/00bb88?text=business+logo+id","location":[{"lat":-13.402129,"lng":158.314883},{"lat":-13.77457,"lng":129.950053},{"lat":82.473256,"lng":46.156252}]},{"id":4,"name":"Kreiger-Streich","website":"http:\/\/www.rolfson.com\/quaerat-ipsa-ab-ut-a-et-sed","logo":"https:\/\/via.placeholder.com\/200x200.png\/0088aa?text=business+logo+sit","location":[{"lat":57.54436,"lng":173.302841},{"lat":-89.678227,"lng":-26.5338},{"lat":39.164525,"lng":34.055303}]},{"id":5,"name":"Padberg-West","website":"http:\/\/schulist.net\/adipisci-hic-veritatis-illum-ut.html","logo":"https:\/\/via.placeholder.com\/200x200.png\/00aa33?text=business+logo+sit","location":[{"lat":-13.580077,"lng":-94.600601},{"lat":33.091265,"lng":89.59582},{"lat":-34.726357,"lng":70.541085}]},{"id":6,"name":"O''Keefe Group","website":"http:\/\/raynor.net\/","logo":"https:\/\/via.placeholder.com\/200x200.png\/001177?text=business+logo+rerum","location":[{"lat":-57.612099,"lng":51.808592},{"lat":-49.795964,"lng":-69.935945},{"lat":-56.20183,"lng":102.473467}]},{"id":7,"name":"Howe, Ankunding and Hill","website":"http:\/\/www.pouros.com\/","logo":"https:\/\/via.placeholder.com\/200x200.png\/00ddee?text=business+logo+consequuntur","location":[{"lat":-72.438854,"lng":165.068835},{"lat":86.305855,"lng":77.33218},{"lat":-17.636325,"lng":136.855606}]},{"id":8,"name":"Skiles Inc","website":"http:\/\/rohan.com\/","logo":"https:\/\/via.placeholder.com\/200x200.png\/0000dd?text=business+logo+et","location":[{"lat":71.010205,"lng":-127.136168},{"lat":19.671421,"lng":-79.447982},{"lat":-42.79003,"lng":-84.350963}]},{"id":9,"name":"Mohr, Reichel and Jenkins","website":"https:\/\/www.mckenzie.biz\/quia-vel-omnis-deleniti-error-ut-qui","logo":"https:\/\/via.placeholder.com\/200x200.png\/004488?text=business+logo+enim","location":[{"lat":-1.183169,"lng":142.925065},{"lat":-2.141557,"lng":89.180468},{"lat":68.920123,"lng":-132.828166}]},{"id":10,"name":"Goodwin Ltd","website":"http:\/\/effertz.net\/quis-laborum-et-sint-ullam","logo":"https:\/\/via.placeholder.com\/200x200.png\/00cc33?text=business+logo+qui","location":[{"lat":-39.44786,"lng":4.444015},{"lat":41.581518,"lng":74.712267},{"lat":-57.540684,"lng":-90.536048}]}],"links":{"first":"http:\/\/localhost:8000\/api\/partners?page=1","last":"http:\/\/localhost:8000\/api\/partners?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/partners?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost:8000\/api\/partners","per_page":10,"to":10,"total":10}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/users
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":1,"name":"Admin","email":"admin@test.com","roles":["admin"]},{"id":2,"name":"Jed Lehner","email":"kailee.simonis@example.org","roles":["user"]},{"id":3,"name":"Demarco Ortiz","email":"litzy.glover@example.com","roles":["user"]},{"id":4,"name":"Maxwell Kozey","email":"hoeger.raleigh@example.net","roles":["user"]},{"id":5,"name":"Mrs. Cleta Hegmann","email":"mswift@example.org","roles":["user"]},{"id":6,"name":"Mr. Tobin Oberbrunner","email":"garry.kovacek@example.org","roles":["user"]},{"id":7,"name":"Anika Jacobi","email":"romaguera.gerry@example.org","roles":["user"]},{"id":8,"name":"Nelle Koelpin","email":"oconroy@example.com","roles":["user"]},{"id":9,"name":"Salvador Pfannerstill","email":"boehm.jadon@example.com","roles":["user"]},{"id":10,"name":"Dr. Nickolas Beier Jr.","email":"dereck00@example.com","roles":["user"]}],"links":{"first":"http:\/\/localhost:8000\/api\/users?page=1","last":"http:\/\/localhost:8000\/api\/users?page=2","prev":null,"next":"http:\/\/localhost:8000\/api\/users?page=2"},"meta":{"current_page":1,"from":1,"last_page":2,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/users?page=1","label":"1","active":true},{"url":"http:\/\/localhost:8000\/api\/users?page=2","label":"2","active":false},{"url":"http:\/\/localhost:8000\/api\/users?page=2","label":"Next &raquo;","active":false}],"path":"http:\/\/localhost:8000\/api\/users","per_page":10,"to":10,"total":13}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

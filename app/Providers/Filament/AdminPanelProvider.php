@@ -3,6 +3,7 @@
 namespace App\Providers\Filament;
 
 use Althinect\FilamentSpatieRolesPermissions\FilamentSpatieRolesPermissionsPlugin;
+use App\Enums\Role;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -55,7 +56,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
-                RoleMiddleware::using(["admin", "editor", "viewer"]),
+                RoleMiddleware::using(Role::panelRoles()),
             ])
             ->plugin(FilamentSpatieRolesPermissionsPlugin::make());
     }

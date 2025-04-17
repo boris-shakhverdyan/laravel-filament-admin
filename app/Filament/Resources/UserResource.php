@@ -37,12 +37,12 @@ class UserResource extends Resource
 
                 Forms\Components\TextInput::make('password')
                     ->password()
-                    ->required(fn (string $context): bool => $context === 'create')
-                    ->dehydrateStateUsing(fn ($state) => filled($state) ? bcrypt($state) : null)
-                    ->dehydrated(fn ($state) => filled($state)),
+                    ->nullable()
+                    ->dehydrated(fn ($state) => filled($state))
+                    ->required(fn (string $context): bool => $context === 'create'),
 
                 Forms\Components\Select::make('roles')
-                    ->label("Role")
+                    ->label('Role')
                     ->relationship('roles', 'name')
                     ->preload()
                     ->searchable()
@@ -59,7 +59,7 @@ class UserResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')->sortable()->searchable(),
                 Tables\Columns\TextColumn::make('email')->sortable()->searchable(),
-                Tables\Columns\TextColumn::make('roles.name')->label("Role")->badge(),
+                Tables\Columns\TextColumn::make('roles.name')->label('Role')->badge(),
                 Tables\Columns\TextColumn::make('created_at')->dateTime('d.m.Y H:i'),
             ])
             ->filters([

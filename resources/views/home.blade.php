@@ -1,16 +1,29 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            All activities
-        </h2>
+        <div class="w-full flex py-2 justify-between items-center">
+            <div class="flex gap-3 m-0">
+                <h2 class="font-semibold text-xl text-gray-800 leading-tight">Activities</h2>
+                <a href="{{ route('partners.index') }}" class="text-2xl text-blue-600 hover:underline">Partners</a>
+            </div>
+
+            @guest
+                <div class="flex gap-3 m-0">
+                    <a href="{{ route('login') }}" class="text-blue-600 hover:underline">Login</a>
+                    <a href="{{ route('register') }}" class="text-blue-600 hover:underline">Register</a>
+                </div>
+            @endguest
+        </div>
     </x-slot>
 
-    <div class="py-6 space-y-6">
+
+    <div class="py-6 px-6 space-y-6">
         @forelse($activities as $activity)
             <div class="bg-white shadow rounded-md p-4 space-y-2">
                 <h3 class="text-lg font-bold">{{ $activity->title }}</h3>
 
-                <p class="text-sm text-gray-700">{{ $activity->short_description }}</p>
+                <p class="text-sm text-gray-700"><b>Short description: </b>{{ $activity->short_description }}</p>
+
+                <p class="text-sm text-gray-700"><b>Description: </b>{{ $activity->description }}</p>
 
                 <ul class="text-sm text-gray-600">
                     <li><strong>Type:</strong> {{ $activity->type->name ?? '—' }}</li>
@@ -80,7 +93,6 @@
 
                     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                         maxZoom: 18,
-                        attribution: '&copy; OpenStreetMap contributors'
                     }).addTo(map);
 
                     const polygon = L.polygon(coords.map(p => [p.lat, p.lng]), {

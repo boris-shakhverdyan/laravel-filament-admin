@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Enums\Role;
 use App\Models\Activity;
 use App\Models\ActivityType;
 use App\Models\Partner;
@@ -31,7 +32,7 @@ class ActivityFactory extends Factory
                 ['lat' => $this->faker->latitude(), 'lng' => $this->faker->longitude()],
             ],
             'partner_id' => Partner::inRandomOrder()->first()?->id,
-            'created_by' => User::role(['admin'])->first()?->id,
+            'created_by' => User::role([Role::ADMIN->value])->first()?->id,
             'activity_type_id' => ActivityType::inRandomOrder()->first()?->id,
         ];
     }

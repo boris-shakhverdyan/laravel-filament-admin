@@ -54,11 +54,11 @@ class ActivityResource extends Resource
                     ->required(),
 
                 Forms\Components\SpatieMediaLibraryFileUpload::make('images')
-                    ->collection('images')->mimeTypeMap(["image/jpeg" => "jpg", "image/png" => "png"])
+                    ->collection('images')->mimeTypeMap(['image/jpeg' => 'jpg', 'image/png' => 'png'])
                     ->multiple(),
 
                 Forms\Components\SpatieMediaLibraryFileUpload::make('videos')
-                    ->collection('videos')->mimeTypeMap(["video/mp4" => "mp4"])
+                    ->collection('videos')->mimeTypeMap(['video/mp4' => 'mp4'])
                     ->multiple(),
             ]);
     }

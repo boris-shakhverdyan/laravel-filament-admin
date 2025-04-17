@@ -15,7 +15,7 @@ class UsersWithFavoritesSeeder extends Seeder
      */
     public function run(): void
     {
-        $role = Role::firstOrCreate(['name' => 'user']);
+        $role = Role::firstOrCreate(['name' => \App\Enums\Role::USER->value]);
 
         /** @var Collection<User> $users */
         $users = User::factory(10)->create();

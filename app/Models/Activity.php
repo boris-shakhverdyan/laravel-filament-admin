@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -20,6 +21,8 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @property ?array $location
  * @property int $created_by
  * @property int $activity_type_id
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
  *
  * @property ?Partner $partner
  * @property User $creator

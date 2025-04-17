@@ -14,10 +14,11 @@ class AdminUserSeeder extends Seeder
      */
     public function run(): void
     {
-        foreach (['admin', 'editor', 'viewer', 'user'] as $role) {
+        foreach (\App\Enums\Role::values() as $role) {
             Role::firstOrCreate(['name' => $role]);
         }
 
+        /** @var User $admin */
         $admin = User::updateOrCreate(
             ['email' => 'admin@test.com'],
             [
@@ -27,6 +28,6 @@ class AdminUserSeeder extends Seeder
             ]
         );
 
-        $admin->assignRole('admin');
+        $admin->assignRole(\App\Enums\Role::ADMIN->value);
     }
 }
