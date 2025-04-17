@@ -30,7 +30,7 @@ docker-compose up -d
 Then run:
 
 ```bash
-docker exec -it app php artisan migrate:fresh --seed
+docker exec -it laravel-app php artisan migrate:fresh --seed
 ```
 
 Frontend assets are compiled automatically in Docker (`npm install && npm run build`).
