@@ -3,7 +3,6 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ActivityTypeResource\Pages;
-use App\Filament\Resources\ActivityTypeResource\RelationManagers;
 use App\Filament\Traits\HasRoleBasedAccess;
 use App\Models\ActivityType;
 use Filament\Forms;
@@ -11,8 +10,6 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class ActivityTypeResource extends Resource
 {
