@@ -26,7 +26,15 @@ class PartnerResource extends Resource
                 Forms\Components\TextInput::make('name')->required(),
                 Forms\Components\TextInput::make('website')->url()->nullable(),
                 Forms\Components\FileUpload::make('logo')->nullable()->acceptedFileTypes(['image/png', 'image/jpeg', 'image/jpg']),
-                Forms\Components\KeyValue::make('location')->nullable(),
+                Forms\Components\Textarea::make('location')
+                    ->label('Location (Polygon Coordinates)')
+                    ->json()
+                    ->rows(6)
+                    ->formatStateUsing(fn ($state) => json_encode($state, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES))
+                    ->dehydrateStateUsing(fn ($state) => json_decode($state, true))
+                    ->hint('Введите массив координат: [{"lat": ..., "lng": ...}, ...]')
+                    ->columnSpanFull()
+                    ->nullable(),
             ]);
     }
 

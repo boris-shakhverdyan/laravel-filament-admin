@@ -22,8 +22,9 @@ class PartnerFactory extends Factory
             'website' => $this->faker->url,
             'logo' => $this->faker->imageUrl(200, 200, 'business', true, 'logo'),
             'location' => [
-                'lat' => $this->faker->latitude(),
-                'lng' => $this->faker->longitude(),
+                ['lat' => $this->faker->latitude(), 'lng' => $this->faker->longitude()],
+                ['lat' => $this->faker->latitude(), 'lng' => $this->faker->longitude()],
+                ['lat' => $this->faker->latitude(), 'lng' => $this->faker->longitude()],
             ],
         ];
     }

@@ -35,6 +35,17 @@ class ActivityResource extends Resource
                 Forms\Components\Select::make('activity_type_id')
                     ->relationship('type', 'name')->required(),
 
+                Forms\Components\Textarea::make('location')
+                    ->label('Location (Polygon Coordinates)')
+                    ->json()
+                    ->rows(6)
+                    ->nullable()
+                    ->formatStateUsing(fn ($state) => json_encode($state, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES))
+                    ->dehydrateStateUsing(fn ($state) => json_decode($state, true))
+                    ->hint('Введите массив координат: [{"lat": ..., "lng": ...}, ...]')
+                    ->helperText('Нажмите Ctrl+Enter, чтобы вставить массив в формате JSON.')
+                    ->columnSpanFull(),
+
                 Forms\Components\Select::make('partner_id')
                     ->relationship('partner', 'name')
                     ->preload()->searchable()->nullable(),

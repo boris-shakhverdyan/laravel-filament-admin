@@ -26,8 +26,9 @@ class ActivityFactory extends Factory
             'short_description' => $this->faker->text(150),
             'registration_url' => $this->faker->optional()->url(),
             'location' => [
-                'lat' => $this->faker->latitude(),
-                'lng' => $this->faker->longitude(),
+                ['lat' => $this->faker->latitude(), 'lng' => $this->faker->longitude()],
+                ['lat' => $this->faker->latitude(), 'lng' => $this->faker->longitude()],
+                ['lat' => $this->faker->latitude(), 'lng' => $this->faker->longitude()],
             ],
             'partner_id' => Partner::inRandomOrder()->first()?->id,
             'created_by' => User::role(['admin'])->first()?->id,
