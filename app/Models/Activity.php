@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
 /**
@@ -25,7 +26,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @property ActivityType $type
  * @property Collection<User> $favorited_by
  */
-class Activity extends Model
+class Activity extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia;
 
@@ -66,7 +67,7 @@ class Activity extends Model
 
     public function registerMediaCollections(): void
     {
-        $this->addMediaCollection('images')->useDisk('public')->acceptsMimeTypes(['image/jpeg', 'image/png']);
+        $this->addMediaCollection('images')->useDisk('public')->acceptsMimeTypes(['image/jpeg', 'image/png', 'image/jpg']);
         $this->addMediaCollection('videos')->useDisk('public')->acceptsMimeTypes(['video/mp4']);
     }
 }

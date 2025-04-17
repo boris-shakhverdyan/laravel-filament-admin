@@ -30,7 +30,7 @@ class ActivityFactory extends Factory
                 'lng' => $this->faker->longitude(),
             ],
             'partner_id' => Partner::inRandomOrder()->first()?->id,
-            'created_by' => User::role(['admin', 'editor'])->inRandomOrder()->first()?->id,
+            'created_by' => User::role(['admin'])->first()?->id,
             'activity_type_id' => ActivityType::inRandomOrder()->first()?->id,
         ];
     }
